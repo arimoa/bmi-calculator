@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Body Mass Index (BMI) Calculator</h1>
+      <div class="inner-container">
+        <div class="actions">
+          <label for="height">Your height (cm)</label>
+          <input
+            type="number"
+            id="height"
+            class="input-section height"
+            placeholder="Enter your height..."
+          />
+          <label for="weight">Your weight (kg)</label>
+          <input
+            type="number"
+            id="weight"
+            class="input-section weight"
+            placeholder="Enter your weight..."
+          />
+          <button id="btn">Calculate</button>
+          <input type="text" class="input-section result" readonly />
+        </div>
+        <div class="information">
+          <p class="bmi-explaination">BMI < 18.5 : UNERWIEGHT</p>
+          <p class="bmi-explaination">18.5 < BMI < 24.9 : NORMAL</p>
+          <p class="bmi-explaination">25 < BMI < 29.9 : OVERWEIGHT</p>
+          <p class="bmi-explaination">30 < BMI < 34.9 : OBESE</p>
+          <p class="bmi-explaination">35 < BMI : EXTREMELY OBESE</p>
+        </div>
+      </div>
+      <p id="conclusion">jadnldl</p>
+    </div>
+  </body>
+</html>
