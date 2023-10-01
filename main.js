@@ -45,6 +45,14 @@ btnElement.addEventListener("click", () => {
     heightField.innerHTML = "";
     return;
   }
+  if (heightField.value < 30 || weightField.value < 1) {
+    conclusion.style.visibility = "visible";
+    result[0].value = "";
+    conclusion.innerHTML = "Weight<1 kg or height<30 cm is not allowed";
+    weightField.innerHTML = "";
+    heightField.innerHTML = "";
+    return;
+  }
   BMI = weight / (height * height);
   console.log(BMI, typeof BMI);
   result[0].value = BMI.toFixed(2);
