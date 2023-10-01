@@ -5,7 +5,8 @@
 }
 body {
   min-height: 100vh;
-  background-image: linear-gradient(#079992, #78e08f);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b2419;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,4 +84,17 @@ body {
 }
 label {
   font-size: 1.1em;
+}
+input {
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+.result {
+  background-color: #aae7cb;
+}
+@media (max-width: 750px) {
+  .container {
+    width: 95%;
+  }
 }
