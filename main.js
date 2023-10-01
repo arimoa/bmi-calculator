@@ -37,6 +37,14 @@ weightField.addEventListener("change", (e) => {
   console.log(weight, typeof weight);
 });
 btnElement.addEventListener("click", () => {
+  if (weightField.value.trim() === "" || heightField.value.trim() === "") {
+    conclusion.style.visibility = "visible";
+    result[0].value = "";
+    conclusion.innerHTML = "You should enter your height and weight";
+    weightField.innerHTML = "";
+    heightField.innerHTML = "";
+    return;
+  }
   BMI = weight / (height * height);
   console.log(BMI, typeof BMI);
   result[0].value = BMI.toFixed(2);
@@ -53,5 +61,5 @@ btnElement.addEventListener("click", () => {
     finalState = "EXTREMELY OBESE";
   }
   conclusion.innerHTML =
-    "your BMI is " + BMI.toFixed(2) + " Which is considered " + finalState;
+    "Your BMI is " + BMI.toFixed(2) + " Which is considered " + finalState;
 });
